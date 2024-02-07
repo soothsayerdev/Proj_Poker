@@ -21,16 +21,17 @@ bigB = "BB"
 smallB = "SB"
 hand = []
 y = 8
+options = [1,2,3,4]
 
 
 
 
 def newGame():
     random.shuffle(cards)
-    player_1= [x, cards[0], cards[1]]
-    player_2= [x, cards[2], cards[3]]
-    player_3= [x, cards[4], cards[5]]
-    player_4= [x, cards[6], cards[7]]
+    player_1= [x, cards[0], cards[1], "NONE"]
+    player_2= [x, cards[2], cards[3], "NONE"]
+    player_3= [x, cards[4], cards[5], "NONE"]
+    player_4= [x, cards[6], cards[7], "NONE"]
 
     print(f"Sua quantidade de fichas é :", x)
     print(f"Sua mão inicial é: ",player_1[1], ",", player_1[2])
@@ -42,6 +43,15 @@ def setCardsinTable():
     table.append[cards[y]]
     y += 1
         
+def optionsResponse():
+    match options:
+        case "pass":
+            return "pass"
+        case "to cover":
+            return  
+
+    
+
 def questionRound():
     #if 
     response = input("1 -Pass,"
@@ -53,7 +63,8 @@ def questionRound():
 
 #def verifyRoundStts():
     
-
+def sttsBlind():
+    players = [player_1, player_2]
 
 
 
